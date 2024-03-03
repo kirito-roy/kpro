@@ -1,0 +1,111 @@
+
+#div1{
+    margin-top: 100px; 
+}   
+#div2{
+    background-color: gray;
+    height: 350px;
+    width: 350px;
+    border-radius: 5px;
+    position: fixed;
+    left: 25px;
+    box-shadow: 5px 5px 5px;
+}
+#div3{
+    position: absolute;
+    background-color: white;
+    font-size: 30px;
+    text-align: right;
+    width: 300px;
+    height: 40px;
+    top: 20px;
+    left: 25px;
+    border-radius: 5px;
+    overflow: auto;
+    scrollbar-width:thin;
+}
+
+#numset{
+    position: absolute;
+    top:80px;
+}
+#div4{
+    text-align: left;
+}
+#div5{
+    text-align: left;
+}
+#div6{
+    text-align: left;
+}
+#div7{
+    text-align: left;
+}
+#in1{
+    width: 300px;
+    font-size: 30px;
+    border-radius: 5px;
+    margin: 20px;
+}
+button{
+    font-size: 30px;
+    margin: 10px;
+    margin-left: 15px;
+    margin-right: 0px;
+    padding-left:20px ;
+    padding-right: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+#bADD{
+    height: 158px;
+    width: 45px;
+    padding-left:10px ;
+}
+#divADD{
+    position:absolute;
+    left: 230px;
+    top:80px;
+}
+#bSUB{
+    width: 20px;
+    padding-left: 10px;
+    
+}
+#divSUB{
+    position:absolute;
+    left:280px;
+    top:80px;
+}
+#bMUL{
+    width: 20px;
+    padding-left: 8px;
+}
+#divMUL{
+    position:absolute;
+    left:280px;
+    top: 140px;
+}
+#bDIV{
+    width: 20px;
+    padding-left: 8px;
+}
+#divDIV{
+    position:absolute;
+    left:280px;
+    top: 198px;
+}
+#bEQUAL{
+    width: 80px;
+    padding-left: 15px;
+}
+#divEQUAL{
+    position:absolute;
+    left:230px;
+    top: 258px;
+}
+
+button:hover{
+    background-color: hsl(0, 0%, 20%);
+}
