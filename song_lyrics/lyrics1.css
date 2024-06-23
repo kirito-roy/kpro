@@ -1,0 +1,32 @@
+#id001{
+    color: hsla(135, 100%, 50%, 0.808);
+    font-size: 60px;
+    text-align: center;
+    margin:20px;
+}
+#id002{
+    color: hsla(135, 100%, 50%, 0.808);
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+}
+#pre1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration:underline;
+    font-size: 15px;
+    text-align: center;
+}
+#div1{
+    justify-items:flex-end;
+}
+h4{
+    display:inline-block;
+}
+img{
+    height: 100px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    margin: 20px;
+    border-radius: 30px;
+}
