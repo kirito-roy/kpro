@@ -6,16 +6,25 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
+#screen{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
 #div1{
     position:sticky;
-    height: 100px;
+    height: 10vb;
     background-color: aqua;
     margin: 0px;
     opacity: 0.5;
     filter: blur(10px);
 }
 #div2{
-    text-align: center;
+    position:sticky; 
+    top: 10%;
+    height: 90vb;
 }
 #div3{
     position:absolute;
@@ -23,17 +32,50 @@ body{
     width: 80%;
     height: 80%;
     left: 10%;
-    top: 15%;
+    top: 5%;
     filter: blur(10px);
     opacity: 0.5;
     border-radius: 25px;
 }
+#div4{
+    position:absolute;
+    
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 5%;
+    overflow:auto;
+}
+/* #div5{
+    position:absolute;
+    background-color: rgb(235, 15, 15);
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 15%;
+    filter: blur(10px);
+    opacity: 0.5;
+    border-radius: 25px;
+} */
+
 .div_class1{
-    background-color: red;
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    margin-top:40px ;
-    opacity: ;
+    background-color: hsla(0, 100%, 50%, 0.233);
+    position:relative;
+    width: 90%;
+    height: 60px;
+    left: 5%;
+    margin-bottom:20px ;
+    border-radius: 15px;
         
 }
+.div_class2{
+    background-color: hsl(177, 50%, 47%);
+    position:relative;
+    height: 80%;
+    width: 10%;
+    top: 5%;
+    left: 5%;
+    border: 2px black solid;
+    border-radius: 15px;
+    
+} 
