@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart</title>
+
+    <style>
+        body{
+    margin: 0px;
+}
+#box {
+    
+    height: 400px;
+    width: 400px;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    animation: go 5s infinite linear ;
+}
+
+#box1{
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    position: relative;
+    transform: rotate(45deg);
+    top:150px;
+    left: 100px;
+
+}
+#box2{
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    position: relative;
+    transform: rotate(45deg);
+    top:-150px;
+    left: 200px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+#box3{
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    position: relative;
+    transform: rotate(45deg);
+    top:-350px;
+    left: 0px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+@keyframes go{
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        
+    </div>
+
+</body>
+</html>
