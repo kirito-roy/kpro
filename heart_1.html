@@ -16,7 +16,7 @@
     position: fixed;
     top: 20%;
     left: 30%;
-    animation: go 5s infinite linear ;
+    animation: go 2s infinite linear ;
 }
 
 #box1{
@@ -52,11 +52,22 @@
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
 }
+h1{
+    position: relative;
+    top: -450px;
+    left: 120px;
+}
 @keyframes go{
     
-    100%{
-        transform: rotate(360deg);
+    25%{
+        transform: rotate(45deg);
+    
     }
+    50%{
+        
+        transform: rotate(-45deg);
+    }
+   
 }
     </style>
 </head>
@@ -65,7 +76,7 @@
         <div id="box1"></div>
         <div id="box2"></div>
         <div id="box3"></div>
-        
+        <h1>you are here</h1>
     </div>
 
 </body>
