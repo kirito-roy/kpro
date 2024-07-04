@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        F-C & C-F
+    </title>
+    <style>
+        body{
+    background-color: rgb(220, 220, 191);
+}
+#mainframe {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    height: 400px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 5px 5px 15px black;
+    border-radius:5px ;
+}
+h1{
+    font-size: 50px;
+    color: blue;
+    text-shadow: 5px 5px 10px rgb(40, 40, 52);
+}
+#in001{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+label{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(0, 0, 255);
+}
+button{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 5px;
+}
+button:hover{
+    animation: bt 2s infinite linear;
+}
+
+@keyframes bt{
+    50%{
+        background-color:#ffffff;
+        color: #000000;
+    }
+}
+
+#ans{
+    font-size: 40px;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <div id="mainframe">
+        <h1>CONVERT</h1>
+        <input type="number" id="in001">
+        <br>
+        <br>
+        <input type="radio" name="temp" id="fc" checked>
+        <label for="fc">Fahrenheit-Celsius</label>
+        <br>
+        <input type="radio" name="temp" id="cf">
+        <label for="cf">Celsius-Fahrenheit</label>
+        <br>
+        <button onclick="convert()" >Convert</button>
+        <br>
+        <div id="ans"></div>
+    </div>
+    <script >
+        const number = document.getElementById("in001");
+const  fc = document.getElementById("fc");
+const cf = document.getElementById("cf");
+const  ans = document.getElementById("ans");
+
+function convert(){
+    let num = number.value;
+    num = Number(num);
+
+    if (fc.checked){
+        let c = (num - 32) * 5/9;
+        ans.textContent=c.toFixed(1)+" C";
+    }else{
+        let f = num * 9/5 + 32;
+        ans.textContent=f.toFixed(1)+ " F";
+    }
+}
+    </script>
+</body>
+</html>
