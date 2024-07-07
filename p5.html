@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="p5.css">
+    <title>Document</title>
+    <style id="style1">
+        #d222{
+    display:block;
+    }
+    #d223{
+        display: none;
+    }
+    *{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+#d1{
+    height: 50vb;
+    width: auto;
+    background-color: #ffffff;
+    position: relative;
+    left: 0%;
+    top: 0%;
+
+}
+
+#d11{
+    font-size: 10vb;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+#d21{
+    background-color: #00a94c;
+    text-align: center;
+    height: 5%;  
+    width: 100%;
+    position: fixed;
+    font: 3vb black;
+    font-weight: bolder;
+    
+}
+#d2{
+    height: 50vb;
+    width: auto;
+    background-color: #00ff73;
+    position:  relative;
+}
+#d22{
+    height: 80%;
+    width: 350px;
+    margin: auto;
+    background-color: #ffffff;
+    position:relative;
+    left: 0px;
+    top: 10%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px black;
+}
+
+#d221{
+    height:5vb;
+    width: auto;
+    background-color: bisque;
+    border-radius: 5px;
+    text-align: center;
+}
+label{
+    font: 3vb bold;
+}
+#red{
+    width: 200px;
+}
+#green{
+    width: 200px;
+}
+#blue{
+    width: 200px;
+}
+
+#d224{
+    text-align: center  ;
+}
+
+#d224 button{
+    height: 4vb;
+    width: auto;
+    text-align: center;
+    font: 3vb bold;
+}
+
+    </style>
+</head>
+<body>
+    <div  id="d1">
+        <div  id="d11"></div>
+    </div>
+    <div id="d2" >
+    <div id="d21">color picker</div>
+        <div id="d22">
+            <div id="d221">
+                <input type="radio" id="rgb" name="options" checked><label for="rgb">RGB</label><input type="radio"  id="hex" name="options" ><label for="hex">HEX</label>
+            </div>
+            <div id="d222">
+                <label for="red">RED</label>
+                <input type="range" id="red" min="0" max="255" value="0"><br>
+                <label for="green">GREEN</label>
+                <input type="range" id="green" min="0" max="225" value="0"><br>
+                <label for="blue">BLUE</label>
+                <input type="range" id="blue" min="0" max="225" value="0">
+            </div>
+            <div id="d223">
+                <label for="hex">HEX</label>
+                <input type="text" id="hex_input" placeholder="#000000" title="use a hex color" >
+            </div>
+            <div id="d224">
+                <button onclick="conv()">CREATE</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script >
+const b001= document.getElementById("b1");
+const display = document.getElementById("d1");
+const display_value=document.getElementById("d11");
+const div221= document.getElementById("d221");
+const div222= document.getElementById("d222");
+const div223= document.getElementById("d223");
+const rgb = document.getElementById("rgb");
+const hex = document.getElementById("hex");
+const red = document.getElementById("red");
+const green = document.getElementById("green");
+const blue = document.getElementById("blue");
+const hex_input = document.getElementById("hex_input");
+const rgbToHex =  (r, g, b) => {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  }
+  
+function check_validation(a){
+    if(a.length==7){
+        let a_lis=[...a];
+        let b_lis="1234567890ABCDEFabcdef";    
+        if(a_lis[0]=="#" && b_lis.indexOf(a_lis[1])!=-1 && b_lis.indexOf(a_lis[2])!=-1 && b_lis.indexOf(a_lis[3])!=-1 && b_lis.indexOf(a_lis[4])!=-1 && b_lis.indexOf(a_lis[5])!=-1 &&b_lis.indexOf(a_lis[6])!=-1 ){
+            return true;
+        }else{
+            return false;
+        }
+    }else{
+        return false;
+    }
+}
+
+rgb.onclick=function(){
+    div223.style.display="none";
+    div222.style.display="block";
+}
+hex.onclick=function(){
+    div223.style.display="block";
+    div222.style.display="none";
+}
+
+function conv(){
+    if(rgb.checked){
+        let color=rgbToHex(Number(red.value),Number(green.value), Number(blue.value));
+        display.style.backgroundColor=color;
+        display_value.textContent=color;
+    }else if(hex.checked){
+        let color=hex_input.value;
+        let pattern="#[0-9A-Fa-f]{6}";
+        // check the pattern validity of hex_input 
+        if(check_validation(color)){
+            display.style.backgroundColor=color;
+        }
+        else{
+            alert("Invalid Hex Code");
+        }
+    }
+}
+
+
+
+    </script>
+</body>
+</html>
+
+
